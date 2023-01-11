@@ -3,6 +3,9 @@
 #Add live unique IPs identified by Nessus/Nmap in a txt file. Place one per line.
 #Add live ports extracted from Nessus/Nmap in a txt file. Place one per line. To reduce time please add ports that are related to WEB services (exclude well-known DNS, NTP etc.)
 
+#Remove httpx binary from Kali. This script is using the GitHub version.
+if test -e /usr/bin/httpx; then sudo rm /usr/bin/httpx; fi
+
 #Check argument number
 if [[ $# -ne 1 ]] && [[ $# -ne 2 ]]; then
 	echo " "	
