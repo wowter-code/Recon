@@ -52,7 +52,6 @@ function run_test () {
 
 	#Run Nuclei against identified URLs
 	nuclei -update
-	nuclei -update -ut
 	nuclei -l output_$DATE/httpx_sites_success.txt -o output_$DATE/nuclei_scan_results.txt
 
 	#Run Gowitness to get screenshots of the live URLs
