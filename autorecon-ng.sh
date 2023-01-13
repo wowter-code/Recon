@@ -55,7 +55,7 @@ function run_test () {
 	nuclei -l output_$DATE/httpx_sites_success.txt -o output_$DATE/nuclei_scan_results.txt
 
 	#Run Gowitness to get screenshots of the live URLs
-	gowitness file -f output_$DATE/httpx_sites_success.txt -P output_$DATE/screenshots
+	gowitness file -f output_$DATE/httpx_sites_success.txt --timeout 30 -P output_$DATE/screenshots
 
 	#Run Gospider to find URL resources that can be usefull
 	gospider -S output_$DATE/httpx_sites_success.txt -o output_$DATE/gospider_results
