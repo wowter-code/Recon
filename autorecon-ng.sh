@@ -60,7 +60,7 @@ function run_test () {
 	#Run Gospider to find URL resources that can be usefull
 	gospider -S output_$DATE/httpx_sites_success.txt -o output_$DATE/gospider_results
 
-	echo -e "\n\x1B[01;32m[+]\x1B[0m Scanning is Completed\! Review the results from output_$DATE directory."
+	echo -e "\n\x1B[01;32m[+]\x1B[0m Scanning is Completed! Review the results from output_$DATE directory."
 }
 
 if [[ $# -eq 2 ]]; then
